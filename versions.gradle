@@ -29,5 +29,6 @@ ext.versions = [
         'androidXJunit'     : '1.1.2',
         'espressoCore'      : '3.3.0',
         'coreTesting'       : '2.1.0',
-        'androidXTestCore'  : '1.3.0'
+        'androidXTestCore'  : '1.3.0',
+        'kranberry'      : '0.3-alpha'
 ]

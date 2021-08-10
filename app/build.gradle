@@ -80,6 +80,7 @@ dependencies {
     androidTestImplementation "androidx.test:core-ktx:$versions.androidXTestCore"
     androidTestImplementation "io.mockk:mockk-android:$versions.mockk"
     androidTestImplementation "androidx.navigation:navigation-testing:$versions.navigation"
+    androidTestImplementation "io.github.kranberry-io:kranberry:$versions.kranberry"
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
