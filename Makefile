@@ -30,3 +30,11 @@ androidTestDebugModule:
 
 androidTestFileDebugModule:
 	./gradlew :$(module):connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=$(file)
+
+### RUN UI TESTS ###
+test:
+	@adb logcat *:S KRANBERRY_LOG:V & LOGCAT_PID=$$!; \
+	TERM=dumb ./gradlew connectedAndroidTest ; \
+	RESULT=$$?; \
+	if [ -n "$$LOGCAT_PID" ]; then kill $$LOGCAT_PID; fi; \
+	exit $$RESULT

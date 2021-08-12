@@ -1,11 +1,12 @@
 {
   "default_timeout": 60000,
-  "clear_application_data_before_testing": true,
+  "clear_application_data_before_testing": false,
   "skip_chrome_welcome_screen": true,
   "page_load_timeout": 30000,
   "disable_animations": true,
   "app_packages": [
-    "com.android.chrome"
+    "com.angelicao.gifapp",
+    "com.angelicao.gifapp.test"
   ],
   "permissions_granted_to_device": [
     "ACCESS_FINE_LOCATION",
@@ -18,5 +19,5 @@
     "android.widget.ProgressBar"
   ],
   "print_colored_logs": true,
-  "test_class_prefix": "io.kranberry."
+  "test_class_prefix": "com.angelicao.gifapp."
 }
