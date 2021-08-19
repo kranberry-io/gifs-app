@@ -5,6 +5,15 @@ apply plugin: 'kotlin-kapt'
 apply from: '../versions.gradle'
 apply from: '../detekt-config.gradle'
 apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: "io.github.kranberry-io.runtests"
+
+kranberryTests {
+    packageName = "com.angelicao.gifapp.giflist"
+    packageTests = "com.angelicao.gifapp.test"
+    apkOutputPath = "build/outputs/apk/debug/app-debug.apk"
+    androidTestApkOutputPath = "build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+    testsRunner = "androidx.test.runner.AndroidJUnitRunner"
+}
 
 android {
     compileSdkVersion versions.compileSdk
@@ -39,10 +48,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
 
